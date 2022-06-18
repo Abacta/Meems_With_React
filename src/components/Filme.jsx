@@ -1,17 +1,14 @@
 import "../styles/filme.css"
 import Card from "./layout/Card";
 
-// const rick = "https://c.tenor.com/CHc0B6gKHqUAAAAi/deadserver.gif"
-// const saul = "https://i.ytimg.com/vi/pL81PmvSeaQ/hqdefault.jpg"
-
 export default function Filme(props) {
     return (
         <Card>
             <figure className="card-imagem">
-                <img src={ props.umFilme.poster } alt="poster" />
-                <figcaption className="card-titulo">{ props.umFilme.titulo }</figcaption>
-                <p className="card-descricao">{ props.umFilme.descricao }</p>
-                <p className="card-avaliacao">{ props.umFilme.avaliacao }</p>
+                <img src={`http://image.tmdb.org/t/p/w500/${props.umFilme.poster_path}`} alt="poster" />
+                <figcaption className="card-titulo">{ props.umFilme.title }</figcaption>
+                <p className="card-descricao">{ props.umFilme.overview }</p>
+                <p className="card-avaliacao"><span className="material-icons-star">star</span>{ props.umFilme.vote_average }</p>
             </figure>
         </Card>
         
